@@ -1,0 +1,28 @@
+{
+    "name": "properties",
+    "version": "1.0.0",
+    "description": "Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.",
+    "main": "index.js",
+    "directories": {
+      "lib": "lib"
+    },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "hai-server --watch database.json"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Olevente/dolgozat0213"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/Olevente/dolgozat0213/issues"
+    },
+    "homepage": "https://github.com/Olevente/dolgozat0213#readme",
+    "dependencies": {
+      "hai-server": "^0.0.4"
+    }
+  }
+  
