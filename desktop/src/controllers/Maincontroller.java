@@ -3,11 +3,13 @@ package controllers;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import models.Fantasy;
+import models.Builders;
 import models.Restapi;
 import views.MainView;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import javafx.scene.effect.GlowBuilder;
 
 
 
@@ -24,16 +26,16 @@ public class Maincontroller {
 
     private void showData() {
         Restapi restapi = new Restapi();
-        String res = restapi.getFantasy();
-        ArrayList<Fantasy> fList = convertStringToArray(res);
-        this.mainView.printFantasy(fList);
+        String res = restapi.getOlev();
+        ArrayList<Builders> fList = convertStringToArray(res);
+        this.mainView.printolev(fList);
     }
 
-    private ArrayList<Fantasy> convertStringToArray(String res) {
-        ArrayList<Fantasy>fList = null;
+    private ArrayList<Builders> convertStringToArray(String res) {
+        ArrayList<Builders>fList = null;
         GsonBuilder builder = new GlowBuilder();
         Gson gson = builder.create();
-        Fantasy[] fantArray = gson.fromJson(res,Fantasy[].class);
+        Builders[] fantArray = gson.fromJson(res,Builders[].class);
         fList = new ArrayList<>(Arrays.asList(fantArray));
         return fList;
     }
